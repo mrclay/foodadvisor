@@ -17,8 +17,6 @@ COPY database ./database
 COPY public ./public
 COPY script ./script
 
-#ENV PATH="/app/node_modules/.bin:$PATH"
-
 RUN npm ci --unsafe-perm
 
 RUN npm run seed && npm run build
